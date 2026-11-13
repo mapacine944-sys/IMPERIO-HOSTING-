@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IMPERIO HOSTING – Servidores de MTA, FiveM y SA-MP</title>
+<meta name="description" content="Hosting de servidores de MTA: San Andreas, FiveM y SA-MP. Planes desde RD$200 al mes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#12090a;--panel:#1e0f11;--line:#3d1b20;--red:#d71f33;--red2:#8f1424;--hot:#ff5566;--text:#f6ecea;--muted:#bb9fa2;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.55 "Source Sans 3",system-ui,sans-serif}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--hot);outline-offset:3px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:5;background:rgba(18,9,10,.95);border-bottom:2px solid var(--red)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 20px}
+.logo{font-family:Cinzel,serif;font-weight:800;color:var(--hot);letter-spacing:.06em;text-decoration:none;white-space:nowrap}
+nav{display:flex;gap:18px;font-size:.95rem}
+nav a{text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--text)}
+@media(max-width:720px){nav{display:none}}
+.btn{display:inline-block;background:var(--red);color:#fff;text-decoration:none;font-weight:600;padding:10px 18px;border-radius:6px;border:1px solid var(--hot);text-align:center}
+.btn:hover{background:#ea2a40}
+.btn.ghost{background:transparent;border-color:var(--red)}
+.btn.ghost:hover{background:var(--red2)}
+.hero{padding:70px 0 54px;text-align:center;border-bottom:1px solid var(--line)}
+.hero h1{font-family:Cinzel,serif;font-weight:800;font-size:clamp(2.5rem,10vw,5.2rem);line-height:1.02;margin:0;color:var(--red);letter-spacing:.04em;text-shadow:0 0 40px rgba(215,31,51,.45)}
+.hero p{max-width:32em;margin:18px auto 26px;color:var(--muted);font-size:1.15rem}
+.hero .btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+section{padding:54px 0}
+h2{font-family:Cinzel,serif;text-align:center;margin:0 0 6px;font-size:1.7rem}
+.sub{text-align:center;color:var(--muted);margin:0 0 26px}
+.games{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.game{background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--red);border-radius:8px;padding:20px;cursor:pointer;text-align:left;color:inherit;font:inherit}
+.game:hover{border-color:var(--hot)}
+.game b{display:block;font-family:Cinzel,serif;font-size:1.2rem}
+.game span{color:var(--muted)}
+.game em{display:block;margin-top:10px;font-style:normal;color:var(--hot);font-weight:600}
+.tabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:0 0 26px}
+.tabs button{font:600 1rem "Source Sans 3",sans-serif;background:var(--panel);color:var(--text);border:1px solid var(--line);padding:10px 20px;border-radius:6px;cursor:pointer}
+.tabs button[aria-selected=true]{background:var(--red);border-color:var(--hot)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+.plan{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:20px}
+.plan h3{margin:0;font-size:1.1rem}
+.plan .ram{color:var(--muted);margin:2px 0 12px}
+.plan .price{font-family:Cinzel,serif;font-size:1.9rem;font-weight:800;color:var(--hot)}
+.plan .price small{font:400 .95rem "Source Sans 3",sans-serif;color:var(--muted)}
+.plan .btn{display:block;margin-top:14px}
+.alt{background:var(--panel);border-block:1px solid var(--line)}
+.feats{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
+.feats h3{margin:0 0 4px;color:var(--hot);font-size:1.05rem}
+.feats p{margin:0;color:var(--muted)}
+.steps{counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;padding:0;list-style:none;margin:0 0 26px}
+.steps li{counter-increment:s;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:18px 18px 18px 64px;position:relative}
+.steps li::before{content:counter(s);position:absolute;left:16px;top:14px;width:34px;height:34px;border-radius:50%;background:var(--red);display:grid;place-items:center;font:800 1.1rem Cinzel,serif}
+.steps b{display:block}
+.steps span{color:var(--muted)}
+.center{text-align:center}
+details{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:14px 18px;margin-bottom:10px;max-width:720px;margin-inline:auto}
+summary{cursor:pointer;font-weight:600}
+details p{margin:10px 0 0;color:var(--muted)}
+footer{border-top:2px solid var(--red);padding:26px 0;text-align:center;color:var(--muted);font-size:.9rem}
+footer .logo{display:block;margin-bottom:8px}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a class="logo" href="#">IMPERIO HOSTING</a>
+  <nav><a href="#juegos">Juegos</a><a href="#planes">Planes</a><a href="#ventajas">Ventajas</a><a href="#contratar">Cómo contratar</a><a href="#faq">Preguntas</a></nav>
+  <a class="btn" data-discord href="#" target="_blank" rel="noopener">Discord</a>
+</div></header>
+
+<main>
+<div class="hero"><div class="wrap">
+  <h1>IMPERIO<br>HOSTING</h1>
+  <p>Servidores de MTA, FiveM y SA-MP con mejor calidad y a buen precio.</p>
+  <div class="btns">
+    <a class="btn" href="#planes">Ver planes</a>
+    <a class="btn ghost" data-discord href="#" target="_blank" rel="noopener">Entrar al Discord</a>
+  </div>
+</div></div>
+
+<section id="juegos"><div class="wrap">
+  <h2>Elige tu juego</h2>
+  <p class="sub">Tenemos servidores para tres juegos</p>
+  <div class="games" id="games"></div>
+</div></section>
+
+<section id="planes" class="alt"><div class="wrap">
+  <h2 id="gtitle"></h2>
+  <p class="sub">Precios por mes en pesos dominicanos (RD$)</p>
+  <div class="tabs" role="tablist" aria-label="Juegos">
+    <button role="tab" aria-selected="true" data-g="mta">MTA</button>
+    <button role="tab" aria-selected="false" data-g="fivem">FiveM</button>
+    <button role="tab" aria-selected="false" data-g="samp">SA-MP</button>
+  </div>
+  <div class="grid" id="grid"></div>
+</div></section>
+
+<section id="ventajas"><div class="wrap">
+  <h2>Por qué IMPERIO</h2>
+  <p class="sub">Lo que ofrecemos a cada cliente</p>
+  <div class="feats">
+    <div><h3>Precios en pesos</h3><p>Pagas en RD$, sin conversiones raras.</p></div>
+    <div><h3>Planes para todos</h3><p>Desde 1 GB para empezar hasta 32 GB para comunidades grandes.</p></div>
+    <div><h3>Soporte por Discord</h3><p>Hablas directo con nosotros por ticket.</p></div>
+    <div><h3>Tres juegos, un lugar</h3><p>MTA, FiveM y SA-MP en la misma empresa.</p></div>
+  </div>
+</div></section>
+
+<section id="contratar" class="alt"><div class="wrap">
+  <h2>Cómo contratar</h2>
+  <p class="sub">Tres pasos</p>
+  <ol class="steps">
+    <li><b>Entra al Discord</b><span>Usa el botón de abajo.</span></li>
+    <li><b>Abre un ticket</b><span>Dinos el juego y el plan que quieres.</span></li>
+    <li><b>Recibe tu servidor</b><span>Coordinamos el pago y te lo entregamos.</span></li>
+  </ol>
+  <div class="center"><a class="btn" data-discord href="#" target="_blank" rel="noopener">Abrir ticket en Discord</a></div>
+</div></section>
+
+<section id="faq"><div class="wrap">
+  <h2>Preguntas frecuentes</h2>
+  <p class="sub">&nbsp;</p>
+  <details><summary>¿Cómo pago?</summary><p>El pago se coordina por ticket en nuestro Discord.</p></details>
+  <details><summary>¿Puedo cambiar de plan después?</summary><p>Sí. Abre un ticket y te ayudamos a pasar a otro plan.</p></details>
+  <details><summary>¿Qué juegos tienen?</summary><p>MTA: San Andreas, FiveM (GTA V) y SA-MP.</p></details>
+  <details><summary>¿Cuánta RAM necesito?</summary><p>Para empezar o probar, un plan Starter alcanza. Si tu servidor tendrá muchos jugadores o recursos, elige un plan más grande. Pregúntanos en el Discord y te recomendamos uno.</p></details>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <span class="logo">IMPERIO HOSTING</span>
+  <a data-discord href="#" target="_blank" rel="noopener">Únete a nuestro Discord</a>
+</div></footer>
+
+<script src="config.js"></script>
+<script>
+const DISCORD = (window.IMPERIO && window.IMPERIO.discord) || "https://discord.gg/5jqsZxp92";
+document.querySelectorAll("[data-discord]").forEach(a => a.href = DISCORD);
+
+const N = ["Starter","Basic","Pro","Premium","Ultra","Extreme"];
+const GAMES = {
+  mta:   {t:"MTA: San Andreas", n:"MTA",   d:"GTA San Andreas multijugador", ram:[2,4,6,8,12,16],  p:[250,400,550,750,1000,1400]},
+  fivem: {t:"FiveM (GTA V)",    n:"FiveM", d:"GTA V con roleplay y mods",    ram:[4,6,8,12,16,32], p:[700,950,1250,1800,2400,4000]},
+  samp:  {t:"SA-MP",            n:"SA-MP", d:"San Andreas Multiplayer",      ram:[1,2,4,6,8,16],   p:[200,300,450,600,800,1300]}
+};
+const fmt = n => n.toLocaleString("en-US");
+const grid = document.getElementById("grid");
+function show(k){
+  const g = GAMES[k];
+  document.getElementById("gtitle").textContent = "Planes de " + g.t;
+  grid.innerHTML = g.ram.map((r,i) => `
+    <article class="plan">
+      <h3>${g.n} ${N[i]}</h3>
+      <div class="ram">${r} GB de RAM</div>
+      <div class="price">RD$${fmt(g.p[i])} <small>/ mes</small></div>
+      <a class="btn" href="${DISCORD}" target="_blank" rel="noopener">Pedir este plan</a>
+    </article>`).join("");
+  document.querySelectorAll(".tabs button").forEach(b => b.setAttribute("aria-selected", b.dataset.g === k));
+}
+document.getElementById("games").innerHTML = Object.keys(GAMES).map(k => {
+  const g = GAMES[k];
+  return `<button class="game" data-g="${k}"><b>${g.t}</b><span>${g.d}</span><em>Desde RD$${fmt(g.p[0])} al mes</em></button>`;
+}).join("");
+document.querySelectorAll(".game").forEach(b => b.onclick = () => { show(b.dataset.g); document.getElementById("planes").scrollIntoView(); });
+document.querySelectorAll(".tabs button").forEach(b => b.onclick = () => show(b.dataset.g));
+show("mta");
+</script>
+</body>
+</html>
